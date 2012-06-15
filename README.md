@@ -17,7 +17,11 @@ starter application to have `django-pipeline` running on heroku, precompiling co
 
         heroku create --stack cedar --buildpack git@github.com:jiaaro/heroku-buildpack-django.git
 
-2. add `/app/bin` to your PATH in Heroku (all node deps including node will be symlinked here) 
+2. push to heroku
+
+        git push heroku master
+
+3. add `/app/bin` to your PATH in Heroku (all node deps including node will be symlinked here) 
 
         heroku config:add PATH=bin:node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/app/bin
 
